@@ -4,7 +4,10 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
+		"press-kit:generate": "node scripts/generate-press-kit.mjs",
+		"predev": "pnpm press-kit:generate",
 		"dev": "vite dev",
+		"prebuild": "pnpm press-kit:generate",
 		"build": "vite build",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",

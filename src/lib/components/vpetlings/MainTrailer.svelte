@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { asset } from '$app/paths';
 	import trailerPoster from '$lib/assets/vpetlings/screenshots/screenshot_1.webp';
+	import pressKit from '$lib/data/vpetlings-press-kit.json';
 
-	const trailerUrl = asset('/press-kit/video/vpetlings-announcement-trailer.mp4');
+	const trailerUrl = asset(pressKit.trailer.src);
 </script>
 
 <section class="w-full space-y-4 text-center">
@@ -14,6 +15,6 @@
 		poster={trailerPoster}
 	>
 		<source src={trailerUrl} type="video/mp4" />
-		<a href={trailerUrl}> Watch the VPetlings announcement trailer </a>
+		<a href={trailerUrl}>{pressKit.trailer.alt}</a>
 	</video>
 </section>

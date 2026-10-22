@@ -4,69 +4,10 @@
 	import vpetlingsLogo from '$lib/assets/vpetlings/vpetlings-logo.webp';
 	import PressAsset from '$lib/components/vpetlings/PressAsset.svelte';
 	import { LINKS } from '$lib/config/links';
+	import pressKit from '$lib/data/vpetlings-press-kit.json';
 
-	const bundleUrl = asset('/press-kit/vpetlings-press-kit.zip');
-	const trailerUrl = asset('/press-kit/video/vpetlings-announcement-trailer.mp4');
-	const screenshots = [
-		{
-			src: '/press-kit/screenshots/vpetlings-desktop-companion.png',
-			alt: 'A VPetling living alongside the desktop interface'
-		},
-		{
-			src: '/press-kit/screenshots/vpetlings-upgrades.png',
-			alt: 'VPetling upgrades and stat training menu'
-		},
-		{
-			src: '/press-kit/screenshots/vpetlings-world-map.png',
-			alt: 'A VPetling exploring the world map'
-		},
-		{
-			src: '/press-kit/screenshots/vpetlings-battle.png',
-			alt: 'Two VPetlings taking part in a battle'
-		},
-		{
-			src: '/press-kit/screenshots/vpetlings-furniture.png',
-			alt: 'Furniture selection and room customization'
-		},
-		{
-			src: '/press-kit/screenshots/vpetlings-feeding.png',
-			alt: 'Feeding a VPetling with the mouse cursor'
-		},
-		{
-			src: '/press-kit/screenshots/vpetlings-training.png',
-			alt: 'Training and upgrading a VPetling'
-		}
-	];
-
-	const keyArt = [
-		{
-			src: '/press-kit/key-art/vpetlings-key-art-landscape-1920x1080.png',
-			alt: 'Landscape VPetlings key art'
-		},
-		{
-			src: '/press-kit/key-art/vpetlings-key-art-portrait-748x896.png',
-			alt: 'Portrait VPetlings key art'
-		},
-		{
-			src: '/press-kit/key-art/vpetlings-key-art-banner-920x430.png',
-			alt: 'Wide VPetlings banner art'
-		}
-	];
-
-	const gifs = [
-		{
-			src: '/press-kit/gifs/vpetlings-egg-evolutions.gif',
-			alt: 'VPetling eggs and evolution stages'
-		},
-		{
-			src: '/press-kit/gifs/vpetlings-pet-behaviours.gif',
-			alt: 'A selection of VPetling behaviours'
-		},
-		{
-			src: '/press-kit/gifs/vpetlings-room-colors.gif',
-			alt: 'Different VPetling room color themes'
-		}
-	];
+	const bundleUrl = asset(pressKit.bundle.src);
+	const trailerUrl = asset(pressKit.trailer.src);
 
 	let bundleSize = '';
 
@@ -88,7 +29,7 @@
 </script>
 
 <svelte:head>
-	<title>VPetlings Press Kit · Sargantana Games</title>
+	<title>{pressKit.title} · Sargantana Games</title>
 	<meta
 		name="description"
 		content="Official VPetlings press kit with game information, logos, screenshots, key art, GIFs, and trailer."
@@ -114,36 +55,24 @@
 		<div class="space-y-3">
 			<h2 class="text-center text-3xl">Short description</h2>
 			<p class="description-copy text-2xl">
-				VPetlings is a cozy virtual pet that <span class="text-accent-darker"
-					>lives on your desktop</span
-				>. Hatch a little companion, care for them, play together, decorate their room, and raise
-				them across generations as they <span class="text-accent-darker">evolve</span> and
-				<span class="text-accent-darker">train for battle</span>.
+				{#each pressKit.shortDescription as segment, index (index)}
+					{#if segment.accent}<span class="text-accent-darker">{segment.text}</span
+						>{:else}{segment.text}{/if}
+				{/each}
 			</p>
 		</div>
 
 		<div class="space-y-3">
 			<h2 class="text-center text-3xl">Long description</h2>
 			<div class="description-copy space-y-4 text-2xl">
-				<p>
-					VPetlings is a desktop virtual pet game about <span class="text-accent-darker"
-						>raising a small creature from an egg</span
-					>. Each companion wanders around the desktop, eats, sleeps, interacts with the cursor,
-					plays, and develops its own
-					<span class="text-accent-darker">moods, stats, and sleep patterns</span>. Players can care
-					for their pet throughout the day or send them to rest in their room when they need to
-					focus.
-				</p>
-
-				<p>
-					Pets gain experience and evolve over time. At the end of a generation, they can be reborn
-					into a new egg with a head start toward discovering more creatures. Players can decorate
-					their room, unlock color variants, train their stats, explore small worlds, and take part
-					in timing-based battles. VPetlings combines the care of
-					<span class="text-accent-darker">Tamagotchi</span>, the evolutions and battles of
-					<span class="text-accent-darker">Digimon V-Pets</span>, and the charm of old
-					<span class="text-accent-darker">desktop pets</span>.
-				</p>
+				{#each pressKit.longDescription as paragraph, paragraphIndex (paragraphIndex)}
+					<p>
+						{#each paragraph as segment, segmentIndex (segmentIndex)}
+							{#if segment.accent}<span class="text-accent-darker">{segment.text}</span
+								>{:else}{segment.text}{/if}
+						{/each}
+					</p>
+				{/each}
 			</div>
 		</div>
 	</section>
@@ -152,58 +81,34 @@
 		<h2 class="text-center text-3xl">Quick facts</h2>
 
 		<dl class="grid border-y-2 border-text text-xl sm:grid-cols-2">
-			<div class="fact">
-				<dt>Studio</dt>
-				<dd>Sargantana Games</dd>
-			</div>
-			<div class="fact">
-				<dt>Based in</dt>
-				<dd>Spain</dd>
-			</div>
-			<div class="fact">
-				<dt>Release</dt>
-				<dd>2027</dd>
-			</div>
-			<div class="fact">
-				<dt>Platforms</dt>
-				<dd>Windows and Linux</dd>
-			</div>
-			<div class="fact">
-				<dt>Price</dt>
-				<dd>Under €10</dd>
-			</div>
-			<div class="fact">
-				<dt>Genre</dt>
-				<dd>Desktop virtual pet</dd>
-			</div>
-			<div class="fact">
-				<dt>Players</dt>
-				<dd>Single-player</dd>
-			</div>
-			<div class="fact">
-				<dt>Availability</dt>
-				<dd>
-					<a
-						href={LINKS.vpetlings.steam}
-						target="_blank"
-						rel="external noopener noreferrer"
-						class="underline-center text-accent-darker"
-					>
-						Wishlist on Steam
-					</a>
-				</dd>
-			</div>
+			{#each pressKit.facts as fact (fact.label)}
+				<div class="fact">
+					<dt>{fact.label}</dt>
+					<dd>
+						{#if fact.link === 'steam'}
+							<a
+								href={LINKS.vpetlings.steam}
+								target="_blank"
+								rel="external noopener noreferrer"
+								class="underline-center text-accent-darker"
+							>
+								{fact.value}
+							</a>
+						{:else}
+							{fact.value}
+						{/if}
+					</dd>
+				</div>
+			{/each}
 		</dl>
 	</section>
 
 	<section class="max-w-3xl space-y-5 text-center">
 		<h2 class="text-3xl">Key features</h2>
 		<ul class="feature-list text-left text-xl">
-			<li>A virtual pet that roams, rests, and plays directly on your desktop</li>
-			<li>Care, play, room decoration, color variants, and distinct personalities</li>
-			<li>Multiple generations of creatures to evolve and discover</li>
-			<li>Stats, training, small worlds, and timing-based battles</li>
-			<li>Designed to provide company while working, playing, or browsing</li>
+			{#each pressKit.features as feature (feature)}
+				<li>{feature}</li>
+			{/each}
 		</ul>
 	</section>
 
@@ -217,7 +122,7 @@
 			playsinline
 		>
 			<source src={trailerUrl} type="video/mp4" />
-			<a href={trailerUrl}>Download the VPetlings announcement trailer</a>
+			<a href={trailerUrl}>{pressKit.trailer.alt}</a>
 		</video>
 
 		<a href={trailerUrl} download class="underline-center text-xl text-accent-darker">
@@ -230,17 +135,14 @@
 			<h2 class="text-center text-3xl">Logos</h2>
 
 			<div class="grid gap-4 sm:grid-cols-2">
-				<PressAsset
-					src="/press-kit/logos/vpetlings-logo-primary.png"
-					previewSrc={vpetlingsLogo}
-					alt="Full-color VPetlings logo"
-					variant="logo"
-				/>
-				<PressAsset
-					src="/press-kit/logos/vpetlings-wordmark-white.png"
-					alt="White VPetlings wordmark"
-					variant="wordmark"
-				/>
+				{#each pressKit.assets.logos as logo (logo.src)}
+					<PressAsset
+						src={logo.src}
+						previewSrc={logo.preview === 'site-logo' ? vpetlingsLogo : undefined}
+						alt={logo.alt}
+						variant={logo.variant === 'logo' ? 'logo' : 'wordmark'}
+					/>
+				{/each}
 			</div>
 		</div>
 
@@ -248,7 +150,7 @@
 			<h2 class="text-center text-3xl">Screenshots</h2>
 
 			<div class="grid gap-4 sm:grid-cols-2">
-				{#each screenshots as screenshot (screenshot.src)}
+				{#each pressKit.assets.screenshots as screenshot (screenshot.src)}
 					<PressAsset src={screenshot.src} alt={screenshot.alt} />
 				{/each}
 			</div>
@@ -258,7 +160,7 @@
 			<h2 class="text-center text-3xl">Key art</h2>
 
 			<div class="grid gap-4 sm:grid-cols-3">
-				{#each keyArt as artwork (artwork.src)}
+				{#each pressKit.assets.keyArt as artwork (artwork.src)}
 					<PressAsset src={artwork.src} alt={artwork.alt} variant="key-art" />
 				{/each}
 			</div>
@@ -268,7 +170,7 @@
 			<h2 class="text-center text-3xl">GIFs</h2>
 
 			<div class="grid gap-4 sm:grid-cols-3">
-				{#each gifs as gif (gif.src)}
+				{#each pressKit.assets.gifs as gif (gif.src)}
 					<PressAsset src={gif.src} alt={gif.alt} variant="gif" />
 				{/each}
 			</div>
@@ -283,14 +185,12 @@
 
 	<section class="max-w-2xl space-y-4 text-center">
 		<h2 class="text-3xl">Need anything else?</h2>
-		<p class="text-xl">
-			For review keys, interviews, or another asset format, email us directly at
-		</p>
+		<p class="text-xl">{pressKit.contact.prompt}</p>
 		<a
-			href="mailto:contact@sargantanagames.com"
+			href={`mailto:${pressKit.contact.email}`}
 			class="underline-center text-xl text-accent-darker"
 		>
-			contact@sargantanagames.com
+			{pressKit.contact.email}
 		</a>
 	</section>
 </div>

@@ -1,0 +1,153 @@
+{
+	"title": "VPetlings Press Kit",
+	"shortDescription": [
+		{ "text": "VPetlings is a cozy virtual pet that " },
+		{ "text": "lives on your desktop", "accent": true },
+		{
+			"text": ". Hatch a little companion, care for them, play together, decorate their room, and raise them across generations as they "
+		},
+		{ "text": "evolve", "accent": true },
+		{ "text": " and " },
+		{ "text": "train for battle", "accent": true },
+		{ "text": "." }
+	],
+	"longDescription": [
+		[
+			{ "text": "VPetlings is a desktop virtual pet game about " },
+			{ "text": "raising a small creature from an egg", "accent": true },
+			{
+				"text": ". Each companion wanders around the desktop, eats, sleeps, interacts with the cursor, plays, and develops its own "
+			},
+			{ "text": "moods, stats, and sleep patterns", "accent": true },
+			{
+				"text": ". Players can care for their pet throughout the day or send them to rest in their room when they need to focus."
+			}
+		],
+		[
+			{
+				"text": "Pets gain experience and evolve over time. At the end of a generation, they can be reborn into a new egg with a head start toward discovering more creatures. Players can decorate their room, unlock color variants, train their stats, explore small worlds, and take part in timing-based battles. VPetlings combines the care of "
+			},
+			{ "text": "Tamagotchi", "accent": true },
+			{ "text": ", the evolutions and battles of " },
+			{ "text": "Digimon V-Pets", "accent": true },
+			{ "text": ", and the charm of old " },
+			{ "text": "desktop pets", "accent": true },
+			{ "text": "." }
+		]
+	],
+	"facts": [
+		{ "label": "Studio", "value": "Sargantana Games" },
+		{ "label": "Based in", "value": "Spain" },
+		{ "label": "Release", "value": "2027" },
+		{ "label": "Platforms", "value": "Windows and Linux" },
+		{ "label": "Price", "value": "Under €10" },
+		{ "label": "Genre", "value": "Desktop virtual pet" },
+		{ "label": "Players", "value": "Single-player" },
+		{ "label": "Availability", "value": "Wishlist on Steam", "link": "steam" }
+	],
+	"steamAppId": "3799160",
+	"features": [
+		"A virtual pet that roams, rests, and plays directly on your desktop",
+		"Care, play, room decoration, color variants, and distinct personalities",
+		"Multiple generations of creatures to evolve and discover",
+		"Stats, training, small worlds, and timing-based battles",
+		"Designed to provide company while working, playing, or browsing"
+	],
+	"contact": {
+		"email": "contact@sargantanagames.com",
+		"prompt": "For review keys, interviews, or another asset format, email us directly at"
+	},
+	"bundle": {
+		"src": "/press-kit/vpetlings-press-kit.zip",
+		"readme": "/press-kit/README.txt"
+	},
+	"trailer": {
+		"src": "/press-kit/video/vpetlings-announcement-trailer.mp4",
+		"alt": "Download the VPetlings announcement trailer"
+	},
+	"assets": {
+		"logos": [
+			{
+				"src": "/press-kit/logos/vpetlings-logo-primary.png",
+				"alt": "Full-color VPetlings logo",
+				"variant": "logo",
+				"preview": "site-logo"
+			},
+			{
+				"src": "/press-kit/logos/vpetlings-wordmark-white.png",
+				"alt": "White VPetlings wordmark",
+				"variant": "wordmark",
+				"preview": "asset"
+			}
+		],
+		"screenshots": [
+			{
+				"src": "/press-kit/screenshots/vpetlings-desktop-companion.png",
+				"alt": "A VPetling living alongside the desktop interface"
+			},
+			{
+				"src": "/press-kit/screenshots/vpetlings-upgrades.png",
+				"alt": "VPetling upgrades and stat training menu"
+			},
+			{
+				"src": "/press-kit/screenshots/vpetlings-world-map.png",
+				"alt": "A VPetling exploring the world map"
+			},
+			{
+				"src": "/press-kit/screenshots/vpetlings-battle.png",
+				"alt": "Two VPetlings taking part in a battle"
+			},
+			{
+				"src": "/press-kit/screenshots/vpetlings-furniture.png",
+				"alt": "Furniture selection and room customization"
+			},
+			{
+				"src": "/press-kit/screenshots/vpetlings-feeding.png",
+				"alt": "Feeding a VPetling with the mouse cursor"
+			},
+			{
+				"src": "/press-kit/screenshots/vpetlings-training.png",
+				"alt": "Training and upgrading a VPetling"
+			}
+		],
+		"keyArt": [
+			{
+				"src": "/press-kit/key-art/vpetlings-key-art-landscape-1920x1080.png",
+				"alt": "Landscape VPetlings key art"
+			},
+			{
+				"src": "/press-kit/key-art/vpetlings-key-art-portrait-748x896.png",
+				"alt": "Portrait VPetlings key art"
+			},
+			{
+				"src": "/press-kit/key-art/vpetlings-key-art-banner-920x430.png",
+				"alt": "Wide VPetlings banner art"
+			}
+		],
+		"gifs": [
+			{
+				"src": "/press-kit/gifs/vpetlings-egg-evolutions.gif",
+				"alt": "VPetling eggs and evolution stages"
+			},
+			{
+				"src": "/press-kit/gifs/vpetlings-pet-behaviours.gif",
+				"alt": "A selection of VPetling behaviours"
+			},
+			{
+				"src": "/press-kit/gifs/vpetlings-room-colors.gif",
+				"alt": "Different VPetling room color themes"
+			}
+		],
+		"bundleOnly": [
+			"/press-kit/logos/vpetlings-logo-primary.webp",
+			"/press-kit/logos/vpetlings-wordmark-white.webp"
+		]
+	},
+	"contents": [
+		"Transparent game logos",
+		"Seven gameplay screenshots in PNG format",
+		"Landscape, portrait, and banner key art",
+		"Three gameplay GIFs",
+		"The downloadable 1080p announcement trailer"
+	]
+}

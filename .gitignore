@@ -8,6 +8,10 @@ node_modules
 /.svelte-kit
 /build
 
+# Generated press-kit downloads
+/static/press-kit/README.txt
+/static/press-kit/vpetlings-press-kit.zip
+
 # OS
 .DS_Store
 Thumbs.db
