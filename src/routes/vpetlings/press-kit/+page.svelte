@@ -170,7 +170,7 @@
 			</div>
 			<div class="fact">
 				<dt>Price</dt>
-				<dd>&lt 10€</dd>
+				<dd>Under €10</dd>
 			</div>
 			<div class="fact">
 				<dt>Genre</dt>

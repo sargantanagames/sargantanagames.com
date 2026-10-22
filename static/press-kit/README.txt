@@ -40,7 +40,7 @@ Studio: Sargantana Games
 Based in: Spain
 Release: 2027
 Platforms: Windows and Linux
-Price: < 10€
+Price: Under €10
 Genre: Desktop virtual pet
 Players: Single-player
 Availability: Wishlist on Steam
