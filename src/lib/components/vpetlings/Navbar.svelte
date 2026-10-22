@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
 	import vpetlingsLogo from '$lib/assets/vpetlings/vpetlings-logo-raw.webp';
 	import SteamIcon from '$lib/components/SteamIcon.svelte';
@@ -7,15 +8,16 @@
 	let mobileOpen = false;
 
 	const navLinks = [
+		{ href: '/vpetlings', label: 'Home' },
 		{ href: '/vpetlings/about-us', label: 'About Us' },
 		{ href: '/vpetlings/press-kit', label: 'Press Kit' }
-	];
+	] as const;
 </script>
 
 <header class="header-dither w-full bg-accent-dark text-whitish">
 	<nav class="mx-auto flex max-w-5xl items-center px-2 py-1">
 		<!-- Logo -->
-		<a href="/vpetlings" class="flex items-center">
+		<a href={resolve('/vpetlings')} class="flex items-center">
 			<img
 				src={vpetlingsLogo}
 				alt="VPetlings Logo"
@@ -27,9 +29,9 @@
 
 		<!-- Desktop navigation -->
 		<div class="hidden items-center gap-6 text-2xl md:flex">
-			{#each navLinks as link}
+			{#each navLinks as link (link.href)}
 				<a
-					href={link.href}
+					href={resolve(link.href)}
 					aria-current={page.url.pathname === link.href ? 'page' : undefined}
 					class="underline-center opacity-90 transition-opacity ease-out hover:opacity-100 aria-[current=page]:opacity-100"
 				>
@@ -42,7 +44,7 @@
 		<a
 			href={LINKS.vpetlings.steam}
 			target="_blank"
-			rel="noopener noreferrer"
+			rel="external noopener noreferrer"
 			class="
         ml-6 hidden items-center gap-2 rounded
         bg-gradient-to-r from-[#6b8f1a] to-[#4f6b0f]
@@ -72,9 +74,9 @@
 	{#if mobileOpen}
 		<div class="bg-accent-dark px-4 pb-4 text-center md:hidden">
 			<div class="flex flex-col gap-4 text-xl">
-				{#each navLinks as link}
+				{#each navLinks as link (link.href)}
 					<a
-						href={link.href}
+						href={resolve(link.href)}
 						aria-current={page.url.pathname === link.href ? 'page' : undefined}
 						class="opacity-90 transition-opacity ease-out hover:opacity-100 aria-[current=page]:opacity-100"
 						onclick={() => (mobileOpen = false)}
@@ -87,7 +89,7 @@
 					<a
 						href={LINKS.vpetlings.steam}
 						target="_blank"
-						rel="noopener noreferrer"
+						rel="external noopener noreferrer"
 						class="
             mt-2 inline-flex items-center gap-2 rounded
             bg-gradient-to-r from-[#6b8f1a] to-[#4f6b0f]

@@ -136,7 +136,7 @@
 	</div>
 
 	<div class="mt-4 flex w-full justify-center gap-1 md:gap-2">
-		{#each images as _, i}
+		{#each images as image, i (image)}
 			<button
 				aria-label={`Select image ${i + 1}`}
 				onclick={() => {

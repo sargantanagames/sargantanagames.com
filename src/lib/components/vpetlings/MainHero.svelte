@@ -15,14 +15,13 @@
 	<div class="flex flex-col items-center justify-between gap-8 text-center md:flex-row">
 		<div>
 			<h2 class="text-4xl">
-				Your VPet <span class="text-accent-darker">on your desktop</span>!
+				Your virtual pet, <span class="text-accent-darker">right on your desktop</span>.
 			</h2>
 			<p class="text-2xl">
-				Choose your favorite, take care of them, play with them, <span class="text-accent-darker"
-					>train them for battle</span
-				>, and help them <span class="text-accent-darker">evolve</span>! They will always be there,
-				<span class="text-accent-darker">keeping you company</span>
-				while you work, play, or browse.
+				Hatch a little companion, take care of them, play together,
+				<span class="text-accent-darker">train them for battle</span>, and help them
+				<span class="text-accent-darker">evolve</span>. They’ll stay nearby,
+				<span class="text-accent-darker">keeping you company</span> while you work, play, or browse.
 			</p>
 		</div>
 		<img src={capsuleImage} alt="Steam Capsule" class="h-48 object-contain md:h-56" />

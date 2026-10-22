@@ -6,7 +6,7 @@
 <a
 	href={LINKS.vpetlings.steam}
 	target="_blank"
-	rel="noopener noreferrer"
+	rel="external noopener noreferrer"
 	class="
             inline-flex items-center gap-2 rounded
             bg-gradient-to-r from-[#6b8f1a] to-[#4f6b0f]

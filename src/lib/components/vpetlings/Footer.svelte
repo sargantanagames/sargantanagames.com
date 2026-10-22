@@ -16,12 +16,12 @@
 				SargantanaGames © {new Date().getFullYear()}
 			</p>
 
-			<div class="flex items-center gap-12">
-				{#each footerLinks as link}
+			<div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-1 sm:gap-x-12">
+				{#each footerLinks as link (link.href)}
 					<a
 						href={link.href}
 						target="_blank"
-						rel="noopener noreferrer"
+						rel="external noopener noreferrer"
 						class="social-link opacity-80 transition-all ease-out"
 						style={`--hover-color: ${link.hoverColor}`}
 					>

@@ -1,4 +1,5 @@
 <script>
+	import { resolve } from '$app/paths';
 	import { LINKS } from '$lib/config/links';
 </script>
 
@@ -15,7 +16,7 @@
 		<a
 			href={LINKS.vpetlings.steam}
 			target="_blank"
-			rel="noopener noreferrer"
+			rel="external noopener noreferrer"
 			class="underline-center text-accent-darker"
 		>
 			Wishlist on Steam
@@ -37,7 +38,7 @@
 
 	<p class="text-base">
 		Want to learn more about us?
-		<a href="/vpetlings/about-us" class="underline-center text-accent-darker">
+		<a href={resolve('/vpetlings/about-us')} class="underline-center text-accent-darker">
 			Read about the "studio"
 		</a>.
 	</p>
