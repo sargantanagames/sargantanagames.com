@@ -2,7 +2,8 @@
 	import { asset } from '$app/paths';
 	import { onMount } from 'svelte';
 
-	type Variant = 'screenshot' | 'logo' | 'wordmark' | 'artwork' | 'key-art' | 'gif';
+	type Variant =
+		'screenshot' | 'logo' | 'wordmark' | 'wordmark-black' | 'artwork' | 'key-art' | 'gif';
 	type Props = {
 		src: string;
 		alt: string;
@@ -96,7 +97,8 @@
 	}
 
 	.preview[data-variant='logo'],
-	.preview[data-variant='wordmark'] {
+	.preview[data-variant='wordmark'],
+	.preview[data-variant='wordmark-black'] {
 		height: 10rem;
 		padding: 1.25rem;
 	}
@@ -110,7 +112,12 @@
 		background: var(--color-secondary);
 	}
 
-	.preview[data-variant='wordmark'] img {
+	.preview[data-variant='wordmark-black'] {
+		background: var(--color-whitish);
+	}
+
+	.preview[data-variant='wordmark'] img,
+	.preview[data-variant='wordmark-black'] img {
 		width: min(90%, 24rem);
 		object-fit: contain;
 	}

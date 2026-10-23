@@ -60,15 +60,14 @@ const visibleAssets = [
 	...manifest.assets.logos,
 	...manifest.assets.screenshots,
 	...manifest.assets.keyArt,
+	...manifest.assets.artAssets,
 	...manifest.assets.gifs
 ].map(({ src }) => src);
 
-const assetPaths = [...visibleAssets, ...manifest.assets.bundleOnly, manifest.trailer.src].map(
-	(src) => ({
-		name: src.replace('/press-kit/', ''),
-		path: join(staticRoot, src.slice(1))
-	})
-);
+const assetPaths = [...visibleAssets, manifest.trailer.src].map((src) => ({
+	name: src.replace('/press-kit/', ''),
+	path: join(staticRoot, src.slice(1))
+}));
 
 const archiveEntries = [
 	{ name: 'README.txt', data: Buffer.from(readme) },

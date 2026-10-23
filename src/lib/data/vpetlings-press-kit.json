@@ -43,14 +43,15 @@
 		{ "label": "Price", "value": "Under €10" },
 		{ "label": "Genre", "value": "Desktop virtual pet" },
 		{ "label": "Players", "value": "Single-player" },
-		{ "label": "Availability", "value": "Wishlist on Steam", "link": "steam" }
+		{ "label": "Availability", "value": "Steam", "link": "steam" }
 	],
 	"steamAppId": "3799160",
 	"features": [
 		"A virtual pet that roams, rests, and plays directly on your desktop",
 		"Care, play, room decoration, color variants, and distinct personalities",
-		"Multiple generations of creatures to evolve and discover",
+		"27 VPetlings across 9 evolution lines, with 3 stages each",
 		"Stats, training, small worlds, and timing-based battles",
+		"Mod support for custom VPetlings and furniture",
 		"Designed to provide company while working, playing, or browsing"
 	],
 	"contact": {
@@ -78,6 +79,12 @@
 				"alt": "White VPetlings wordmark",
 				"variant": "wordmark",
 				"preview": "asset"
+			},
+			{
+				"src": "/press-kit/logos/vpetlings-wordmark-black.png",
+				"alt": "Black VPetlings wordmark",
+				"variant": "wordmark-black",
+				"preview": "asset"
 			}
 		],
 		"screenshots": [
@@ -102,6 +109,10 @@
 				"alt": "Furniture selection and room customization"
 			},
 			{
+				"src": "/press-kit/screenshots/vpetlings-sleeping-in-room.png",
+				"alt": "A VPetling sleeping in its room while a document is open"
+			},
+			{
 				"src": "/press-kit/screenshots/vpetlings-feeding.png",
 				"alt": "Feeding a VPetling with the mouse cursor"
 			},
@@ -124,6 +135,20 @@
 				"alt": "Wide VPetlings banner art"
 			}
 		],
+		"artAssets": [
+			{
+				"src": "/press-kit/art-assets/vpetlings-background-1920x1080.png",
+				"alt": "VPetlings yellow patterned background"
+			},
+			{
+				"src": "/press-kit/art-assets/vpetlings-logo-with-eggs.png",
+				"alt": "VPetlings logo surrounded by colorful eggs"
+			},
+			{
+				"src": "/press-kit/art-assets/vpetlings-game-window.png",
+				"alt": "VPetlings game window with a battle scene and mouse cursor"
+			}
+		],
 		"gifs": [
 			{
 				"src": "/press-kit/gifs/vpetlings-egg-evolutions.gif",
@@ -136,18 +161,19 @@
 			{
 				"src": "/press-kit/gifs/vpetlings-room-colors.gif",
 				"alt": "Different VPetling room color themes"
+			},
+			{
+				"src": "/press-kit/gifs/vpetlings-gameplay.gif",
+				"alt": "VPetlings desktop gameplay"
 			}
-		],
-		"bundleOnly": [
-			"/press-kit/logos/vpetlings-logo-primary.webp",
-			"/press-kit/logos/vpetlings-wordmark-white.webp"
 		]
 	},
 	"contents": [
-		"Transparent game logos",
-		"Seven gameplay screenshots in PNG format",
+		"Three transparent game logos",
+		"Eight 2560 × 1440 gameplay screenshots in PNG format",
 		"Landscape, portrait, and banner key art",
-		"Three gameplay GIFs",
+		"Three standalone art assets",
+		"Four gameplay GIFs",
 		"The downloadable 1080p announcement trailer"
 	]
 }

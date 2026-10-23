@@ -45,10 +45,6 @@
 		/>
 
 		<h1 class="text-4xl">Press Kit</h1>
-
-		<a class="download-all" href={bundleUrl} download>
-			Download all assets{bundleSize ? ` · ${bundleSize}` : ''}
-		</a>
 	</section>
 
 	<section class="max-w-3xl space-y-8">
@@ -130,17 +126,27 @@
 		</a>
 	</section>
 
+	<div class="text-center">
+		<a class="download-all" href={bundleUrl} download>
+			Download all assets{bundleSize ? ` · ${bundleSize}` : ''}
+		</a>
+	</div>
+
 	<section class="w-full space-y-10">
 		<div class="space-y-4">
 			<h2 class="text-center text-3xl">Logos</h2>
 
-			<div class="grid gap-4 sm:grid-cols-2">
+			<div class="grid gap-4 sm:grid-cols-3">
 				{#each pressKit.assets.logos as logo (logo.src)}
 					<PressAsset
 						src={logo.src}
 						previewSrc={logo.preview === 'site-logo' ? vpetlingsLogo : undefined}
 						alt={logo.alt}
-						variant={logo.variant === 'logo' ? 'logo' : 'wordmark'}
+						variant={logo.variant === 'logo'
+							? 'logo'
+							: logo.variant === 'wordmark-black'
+								? 'wordmark-black'
+								: 'wordmark'}
 					/>
 				{/each}
 			</div>
@@ -169,9 +175,19 @@
 		<div class="space-y-4">
 			<h2 class="text-center text-3xl">GIFs</h2>
 
-			<div class="grid gap-4 sm:grid-cols-3">
+			<div class="grid gap-4 sm:grid-cols-2">
 				{#each pressKit.assets.gifs as gif (gif.src)}
 					<PressAsset src={gif.src} alt={gif.alt} variant="gif" />
+				{/each}
+			</div>
+		</div>
+
+		<div class="space-y-4">
+			<h2 class="text-center text-3xl">Art assets</h2>
+
+			<div class="grid gap-4 sm:grid-cols-3">
+				{#each pressKit.assets.artAssets as artwork (artwork.src)}
+					<PressAsset src={artwork.src} alt={artwork.alt} variant="key-art" />
 				{/each}
 			</div>
 		</div>

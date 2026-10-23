@@ -5,9 +5,11 @@
 	import walkGif from '$lib/assets/vpetlings/vpet-walk.gif';
 	import petGif from '$lib/assets/vpetlings/vpet-pet.gif';
 
-	const { featureImage } = $props<{
+	const {
+		featureImage
+	}: {
 		featureImage: HTMLImageElement | null;
-	}>();
+	} = $props();
 
 	const BASE_SPEED = 0.00022;
 	const IDLE_DURATION = 1000;
