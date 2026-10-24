@@ -9,8 +9,7 @@
 
 	const navLinks = [
 		{ href: '/vpetlings', label: 'Home' },
-		{ href: '/vpetlings/about-us', label: 'About Us' },
-		{ href: '/vpetlings/press-kit', label: 'Press Kit' }
+		{ href: '/vpetlings/about-us', label: 'About Us' }
 	] as const;
 </script>
 

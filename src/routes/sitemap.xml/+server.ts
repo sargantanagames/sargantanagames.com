@@ -4,7 +4,7 @@ import { LINKS } from '$lib/config/links';
 export const prerender = true;
 
 export const GET: RequestHandler = async () => {
-	const pages = ['/vpetlings', '/vpetlings/about-us', '/vpetlings/press-kit'];
+	const pages = ['/vpetlings', '/vpetlings/about-us'];
 
 	const now = new Date().toISOString();
 

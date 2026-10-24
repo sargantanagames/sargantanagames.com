@@ -28,12 +28,14 @@
 	});
 </script>
 
+<!-- Share-only route; intentionally omitted from site navigation and the sitemap. -->
 <svelte:head>
 	<title>{pressKit.title} · Sargantana Games</title>
 	<meta
 		name="description"
 		content="Official VPetlings press kit with game information, logos, screenshots, key art, GIFs, and trailer."
 	/>
+	<meta name="robots" content="noindex, nofollow, noarchive" />
 </svelte:head>
 
 <div class="my-12 flex flex-col items-center gap-16">
